@@ -10,7 +10,6 @@
 from tkinter import *
 import tkinter.messagebox
 
-
 class Person:
 
     #initialising my interface and all its content
@@ -23,7 +22,7 @@ class Person:
         master.title("The WhooziJuicy App")
         master.geometry('400x200+100+200')
 
-        self.label1 = Label(master, text='Hello, and Welcome to WhooziJuicy Night Club ', fg="blue").grid(row=0, column=1)
+        self.label1 = Label(master, text='Hello, and Welcome to WhooziJuicy Night Club ', fg="blue").grid(row=0, column=0)
         self.label2 = Label(master, text="Enter Username").grid(row=2, column=0)
         self.label2 = Label(master, text="Enter Age (remove 0 first)").grid(row=3, column=0)
 
@@ -33,9 +32,9 @@ class Person:
         self.checkAgeButton = Button(master, text="Check entry status", command=self.checkAge).grid(row=4, column=1)
         self.checkUserButton = Button(master, text="Check True age", fg="red", command=self.checkUser).grid(row=4, column=0)
 
-
    #question 2 checking if the username is Q24
     def checkUser(self):
+
         self.username = self.userName.get()
         if self.username == "Q24":
             X = 24 + 6
@@ -57,10 +56,8 @@ class Person:
                     return tkinter.messagebox.showinfo(self.username, "Acess Granted, Is an elder, Must get in First")
             else:
                 return tkinter.messagebox.showinfo(self.username, "Is Denied Acess, too old")
-
         elif self.age < 0:
             return tkinter.messagebox.showinfo(self.username, "Has entered invalid age")
-
         else:
             return tkinter.messagebox.showinfo(self.username, "Is under age!, and Denied Access")
 
@@ -68,11 +65,3 @@ class Person:
 root = Tk()
 User = Person(root)
 root.mainloop()
-
-
-
-
-
-
-
-
