@@ -13,7 +13,7 @@ import tkinter.messagebox
 
 class Person:
 
-
+    #initialising my interface and all its content
     def __init__(self, master):
 
         self.userName = StringVar()
@@ -34,6 +34,7 @@ class Person:
         self.checkUserButton = Button(master, text="Check True age", fg="red", command=self.checkUser).grid(row=4, column=0)
 
 
+   #question 2 checking if the username is Q24
     def checkUser(self):
         self.username = self.userName.get()
         if self.username == "Q24":
@@ -42,7 +43,7 @@ class Person:
         else:
             return tkinter.messagebox.showinfo("User", "Telling the truth")
 
-
+    #Checking user's age if they are allowed to enter
     def checkAge(self):
 
         self.username = self.userName.get()
